@@ -4,10 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bgdoodle"
-    tools:context=".fragment.Frg_sanPham">
+    tools:context=".fragment.Frg_user">
 
     <ListView
-        android:id="@+id/lstSanPham"
+        android:id="@+id/lstUser"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
