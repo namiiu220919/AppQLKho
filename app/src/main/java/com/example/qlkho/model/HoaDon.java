@@ -3,11 +3,13 @@ package com.example.qlkho.model;
 import java.util.Date;
 
 public class HoaDon {
-private int maHd;
-private String soHoaDon;
-private String maUser;
-private int loaiHoaDon;
-private Date ngay;
+    private int maHd;
+    private String soHoaDon;
+    private String maUser;
+    private int loaiHoaDon;
+    private Date ngay;
+
+
 
     public HoaDon() {
     }

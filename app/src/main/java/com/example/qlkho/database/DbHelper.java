@@ -45,7 +45,9 @@ public class DbHelper extends SQLiteOpenHelper {
                 "maLoai INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "tenLoai TEXT NOT NULL)";
         db.execSQL(createTableLoaiSanPham);
-
+        db.execSQL("insert into LoaiSanPham(tenLoai) values" +
+                "('Đồ ăn')," +
+                "('Nước ngọt')");
 
         //Tạo bảng sp
         String createTableSanPham="create table SanPham (" +
@@ -56,19 +58,25 @@ public class DbHelper extends SQLiteOpenHelper {
                 "anhSp BLOB," +
                 "maLoai INTEGER REFERENCES LoaiSach(maLoai))";
         db.execSQL(createTableSanPham);
+        db.execSQL("insert into SanPham(tenSp,giaSp,soLuong,anhSp,maLoai) values" +
+                "('Bim bim',5000,100,'',1)," +
+                "('Coca',20000,50,'',2)");
         String createTableHoaDon = "create table HoaDon(" +
                 "maHoaDon integer primary key autoincrement," +
-                " maUser integer references User(username)," +
-                " loaiHoaDon integer not null," +
-                " ngayThang date not null)";
+                "maUser integer references User(username)," +
+                "loaiHoaDon integer not null," +
+                "ngayThang date not null)";
         db.execSQL(createTableHoaDon);
+        db.execSQL("insert into HoaDon(maUser,loaiHoaDon,ngayThang) values" +
+                "('nam',0,'2023-11-22')," +
+                "('quynh',1,'2023-10-21')");
         //Bảng CtHoaDon
         String createTableCtHoaDon = "create table CtHoaDon(" +
                 "maCtHd integer primary key autoincrement," +
                 "maSp REFERENCES SanPham(maSp)," +
                 "maHoaDon REFERENCES HoaDon(maHoaDon)," +
                 "soLuong integer not null," +
-                "donGia integet not null  ) ";
+                "donGia integer not null)";
         db.execSQL(createTableCtHoaDon);
 
 
@@ -89,4 +97,6 @@ public class DbHelper extends SQLiteOpenHelper {
             onCreate(db);
         }
     }
+
+
 }

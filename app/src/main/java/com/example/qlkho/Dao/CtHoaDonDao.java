@@ -1,5 +1,6 @@
 package com.example.qlkho.Dao;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -64,4 +65,28 @@ public class CtHoaDonDao {
         }
         return list;
     }
+
+//    // Thực hiện truy vấn JOIN
+//    String query = "SELECT HoaDon.*, CtHoaDon.* FROM HoaDon INNER JOIN CtHoaDon ON HoaDon.maHd = CtHoaDon.maHoaDon;";
+//    Cursor cursor = db.rawQuery(query, null);
+//
+//    // Xử lý dữ liệu từ Cursor
+//    if (cursor != null && cursor.moveToFirst()) {
+//        do {
+//            // Đọc dữ liệu từ cursor
+//            int maHoaDon = cursor.getInt(cursor.getColumnIndex("maHd"));
+//            String soHoaDon = cursor.getString(cursor.getColumnIndex("soHoaDon"));
+//            // ... Đọc các trường khác tương ứng
+//
+//            int maCtHoaDon = cursor.getInt(cursor.getColumnIndex("maCthd"));
+//            // ... Đọc các trường từ bảng CtHoaDon
+//
+//            // Xử lý dữ liệu theo nhu cầu của bạn
+//        } while (cursor.moveToNext());
+//    }
+//
+//    // Đóng cursor khi đã sử dụng xong
+//    if (cursor != null) {
+//        cursor.close();
+//    }
 }

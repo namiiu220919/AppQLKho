@@ -14,17 +14,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.qlkho.Dao.CtHoaDonDao;
+import com.example.qlkho.Dao.HoaDonDao;
 import com.example.qlkho.Dao.SanPhamDao;
 import com.example.qlkho.R;
 import com.example.qlkho.adapter.CtHoaDonAdapter;
 import com.example.qlkho.adapter.SanPhamSpinnerAdapter;
 import com.example.qlkho.model.CtHoaDon;
+import com.example.qlkho.model.HoaDon;
 import com.example.qlkho.model.SanPham;
 
 import java.util.ArrayList;
 
 public class HoaDonCtActivity extends AppCompatActivity {
-
     ListView lvSp;
     EditText edtsoHd, edtSoLuong;
     Spinner spnSanPham;
@@ -39,6 +40,7 @@ public class HoaDonCtActivity extends AppCompatActivity {
     CtHoaDon hoaDonCt;
     SanPhamDao sanPhamDao;
     String tenSp;
+    HoaDonDao hoaDonDao;
     int maSp, giatien;
     int maHd;
 
@@ -106,6 +108,14 @@ public class HoaDonCtActivity extends AppCompatActivity {
                         edtSoLuong.setText("");
                         list.clear();
                         list.addAll(ctHoaDonDao.getAll(maHd));
+                        hoaDonDao=new HoaDonDao(HoaDonCtActivity.this);
+                        HoaDon hoaDon=hoaDonDao.getID(String.valueOf(hoaDonCt.getMaHoaDon()));
+                        if (hoaDon.getLoaiHoaDon()==0){
+                            sanPhamDao.importProduct(maSp,Integer.parseInt(soluong));
+                        }else {
+                            sanPhamDao.exportProduct(maSp, Integer.parseInt(soluong));
+                        }
+
                         adapter.notifyDataSetChanged();
                     } else {
                         Toast.makeText(HoaDonCtActivity.this, "Thêm fail", Toast.LENGTH_SHORT).show();

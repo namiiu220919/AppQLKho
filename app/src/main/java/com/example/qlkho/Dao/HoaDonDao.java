@@ -30,6 +30,15 @@ public class HoaDonDao {
         String sql = "Select * from HoaDon";
         return getData(sql);
     }
+    public HoaDon getID(String id){
+        String sql = "SELECT *FROM HoaDon WHERE maHoaDon=?";
+        List<HoaDon> list = getData(sql,id);
+        if (!list.isEmpty()) {
+            return list.get(0);
+        } else {
+            return null;
+        }
+    }
 
     public boolean insertHoaDon(HoaDon hd) {
         ContentValues values = new ContentValues();

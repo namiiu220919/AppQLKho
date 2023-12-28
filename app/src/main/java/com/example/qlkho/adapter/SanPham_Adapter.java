@@ -14,9 +14,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 
+import com.example.qlkho.Dao.LoaiSpDao;
 import com.example.qlkho.Dao.SanPhamDao;
 import com.example.qlkho.R;
 import com.example.qlkho.fragment.Frg_sanPham;
+import com.example.qlkho.model.LoaiSp;
 import com.example.qlkho.model.SanPham;
 
 import java.util.ArrayList;
@@ -29,6 +31,7 @@ public class SanPham_Adapter extends ArrayAdapter<SanPham> {
     TextView txtMasp,txtTenSp,txtGiaSp,txtLoaisp,txtSoLuong;
     ImageView imgAnhSp,imgDelete;
     byte[] hinhAnh;
+    LoaiSpDao loaiSpDao;
 
     public SanPham_Adapter(@NonNull Context context, Frg_sanPham frgSanPham, ArrayList<SanPham> list) {
         super(context, 0,list);
@@ -62,6 +65,9 @@ public class SanPham_Adapter extends ArrayAdapter<SanPham> {
             txtTenSp.setText("Tên sản phẩm: "+item.getTenSP());
             txtGiaSp.setText("Giá Sản Phẩm: "+item.getGiaSp());
             txtSoLuong.setText("Số lượng: "+item.getSoLuong());
+            loaiSpDao=new LoaiSpDao(context);
+            LoaiSp loaisp=loaiSpDao.getID(String.valueOf(item.getMaLoai()));
+            txtLoaisp.setText("Loại sp: " + loaisp.getTenLoai());
 
             hinhAnh = item.getAnhSP();
             Bitmap bitmap= BitmapFactory.decodeByteArray(hinhAnh, 0, hinhAnh.length);

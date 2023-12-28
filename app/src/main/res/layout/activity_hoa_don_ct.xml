@@ -14,6 +14,7 @@
         android:layout_marginTop="18dp"/>
 
     <TextView
+        android:id="@+id/tvTongTien"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -22,7 +23,7 @@
         android:layout_marginTop="20dp"
         android:textStyle="bold"
         android:text="Bill: "
-        android:id="@+id/tvTongTien"
+
         android:textColor="#ED0D0D"/>
 
     <com.google.android.material.textfield.TextInputLayout

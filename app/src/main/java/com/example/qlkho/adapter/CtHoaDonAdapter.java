@@ -87,7 +87,7 @@ public class CtHoaDonAdapter extends ArrayAdapter<CtHoaDon> {
                             list.clear();
                             list.addAll(ctHoaDonDao.getAll(item.getMaHoaDon()));
                             notifyDataSetChanged();
-                            Toast.makeText(context, "Delete Succ", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context, "Xoá thành công", Toast.LENGTH_SHORT).show();
                             if (onDeleteSuccessListener != null) {
                                 onDeleteSuccessListener.onDeleteSuccess();
                             }
@@ -97,7 +97,7 @@ public class CtHoaDonAdapter extends ArrayAdapter<CtHoaDon> {
                 builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(context, "Bạn đã thoát xoá", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Bạn đã huỷ", Toast.LENGTH_SHORT).show();
                     }
                 });
                 AlertDialog dialog = builder.create();

@@ -14,11 +14,11 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.example.xuonglv1.Dao.CtHoaDonDao;
-import com.example.xuonglv1.Dao.SanPhamDao;
-import com.example.xuonglv1.Model.CtHoaDon;
-import com.example.xuonglv1.Model.SanPham;
-import com.example.xuonglv1.R;
+import com.example.qlkho.Dao.CtHoaDonDao;
+import com.example.qlkho.Dao.SanPhamDao;
+import com.example.qlkho.Model.CtHoaDon;
+import com.example.qlkho.Model.SanPham;
+import com.example.qlkho.R;
 
 import java.util.ArrayList;
 
@@ -27,7 +27,7 @@ public class CtHoaDonAdapter extends ArrayAdapter<CtHoaDon> {
     private ArrayList<CtHoaDon> list;
     TextView tvSp, tvSl, tvThanhTien;
     ImageView btnDelete;
-   CtHoaDonDao ctHoaDonDao;
+    CtHoaDonDao ctHoaDonDao;
     SanPhamDao sanPhamDao;
     private OnDeleteSuccessListener onDeleteSuccessListener;
     public CtHoaDonAdapter(@NonNull Context context, ArrayList<CtHoaDon> list) {
