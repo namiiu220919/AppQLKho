@@ -15,6 +15,7 @@
             android:id="@+id/edtTimKiemHoaDon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="Tìm kiếm"
             android:layout_margin="10dp" />
 
         <ListView

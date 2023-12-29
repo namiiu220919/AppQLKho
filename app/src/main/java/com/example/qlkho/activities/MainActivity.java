@@ -64,6 +64,11 @@ public class MainActivity extends AppCompatActivity {
         String username = user1.getUsername();
         edUser.setText("Welcome " + username);
 
+        if(user.equalsIgnoreCase("admin")){
+            nv.getMenu().findItem(R.id.nav_ThanhVien).setVisible(true);
+        }else{
+            nv.getMenu().findItem(R.id.nav_ThanhVien).setVisible(false);
+        }
         //Điều hướng navigation
         nv.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override

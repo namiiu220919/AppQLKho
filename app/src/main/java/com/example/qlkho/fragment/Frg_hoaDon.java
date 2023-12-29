@@ -82,13 +82,13 @@ public class Frg_hoaDon extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                list.clear();
-                for (HoaDon hd : templist) {
-                    if (hd.getSoHoaDon().contains(charSequence.toString())) {
-                        list.add(hd);
-                    }
-                }
-                adapter.notifyDataSetChanged();
+//                list.clear();
+//                for (HoaDon hd : templist) {
+//                    if (hd.getSoHoaDon().contains(charSequence.toString())) {
+//                        list.add(hd);
+//                    }
+//                }
+//                adapter.notifyDataSetChanged();
             }
 
             @Override

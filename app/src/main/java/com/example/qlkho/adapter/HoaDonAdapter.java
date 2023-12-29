@@ -1,6 +1,7 @@
 package com.example.qlkho.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,7 +53,8 @@ public class HoaDonAdapter extends ArrayAdapter {
             txtNgay = v.findViewById(R.id.tvNgay_itemHoaDon);
             btnDelete = v.findViewById(R.id.btnDelete_hoaDon);
 //
-            txtMaHd.setText("Mã hóa đơn"+item.getMaHd());
+            txtMaHd.setText("Mã hóa đơn: "+item.getMaHd());
+            txtMaHd.setTextColor(Color.BLACK);
             txtMaThuKho.setText("Tên thủ kho: "+item.getMaUser());
             try {
                 txtNgay.setText("Ngày: "+ sfd.format(item.getNgay()));

@@ -8,20 +8,24 @@
         android:id="@+id/txtUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:text="Tên đăng nhập: "
-        android:textSize="16dp"/>
+        android:textColor="@color/black"
+        android:textSize="18dp"/>
     <TextView
         android:id="@+id/txtNumberPhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Số điện thoại: "
-        android:textSize="16dp"/>
+        android:textColor="@color/black"
+        android:textSize="18dp"/>
     <TextView
         android:id="@+id/txtPosition"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Chức vụ: "
-        android:textSize="16dp"/>
+        android:textColor="@color/black"
+        android:textSize="18dp"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,12 +35,13 @@
             android:layout_width="0dp"
             android:layout_weight="2"
             android:text="Giới thiệu: "
+            android:textColor="@color/black"
             android:layout_height="wrap_content"
-            android:textSize="16dp"/>
+            android:textSize="18dp"/>
         <ImageView
             android:id="@+id/btnDelete"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:src="@drawable/xoa"/>
     </LinearLayout>
     <TextView
@@ -44,11 +49,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Đăng nhập lần cuối: "
-        android:textSize="16dp"/>
+        android:textColor="@color/black"
+        android:textSize="18dp"/>
     <TextView
         android:id="@+id/txtCreatedDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ngày tạo: "
-        android:textSize="16dp"/>
+        android:textColor="@color/black"
+        android:textSize="18dp"/>
 </LinearLayout>

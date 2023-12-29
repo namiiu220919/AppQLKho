@@ -104,7 +104,7 @@ public class HoaDonCtActivity extends AppCompatActivity {
                     hoaDonCt.setMaSp(maSp);
                     hoaDonCt.setDonGia(giatien);
                     if (ctHoaDonDao.insertHoaDonCt(hoaDonCt)) {
-                        Toast.makeText(HoaDonCtActivity.this, "Thêm  succ", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(HoaDonCtActivity.this, "Thêm  thành công", Toast.LENGTH_SHORT).show();
                         edtSoLuong.setText("");
                         list.clear();
                         list.addAll(ctHoaDonDao.getAll(maHd));
@@ -118,7 +118,7 @@ public class HoaDonCtActivity extends AppCompatActivity {
 
                         adapter.notifyDataSetChanged();
                     } else {
-                        Toast.makeText(HoaDonCtActivity.this, "Thêm fail", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(HoaDonCtActivity.this, "Thêm thất bại", Toast.LENGTH_SHORT).show();
                     }
                 }
                 capNhapLv();

@@ -22,8 +22,10 @@
                 android:id="@+id/tvMaHd_itemHoaDon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+
                 android:layout_marginLeft="7dp"
                 android:text="Mã hóa đơn"
+                android:textColor="@color/black"
                  />
         </LinearLayout>
 

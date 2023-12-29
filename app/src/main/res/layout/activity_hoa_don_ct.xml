@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bgdoodle"
     android:orientation="vertical">
     <ImageView
         android:layout_width="28dp"
@@ -14,7 +14,6 @@
         android:layout_marginTop="18dp"/>
 
     <TextView
-        android:id="@+id/tvTongTien"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -23,8 +22,8 @@
         android:layout_marginTop="20dp"
         android:textStyle="bold"
         android:text="Bill: "
-
-        android:textColor="#ED0D0D"/>
+        android:id="@+id/tvTongTien"
+        android:textColor="#249829"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -52,23 +51,46 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <Spinner
-            android:id="@+id/spSp_itemHdCt"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_weight="1"/>
-        <EditText
-            android:id="@+id/edtSoLuong_hdct"
-            android:layout_width="10dp"
-            android:layout_height="40dp"
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:ems="10"
-            android:gravity="center"
-            android:layout_marginRight="15dp"
-            android:inputType="number"
-            android:hint="Số lượng" />
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/black"
+                android:text="Chọn sản phẩm: "/>
+            <Spinner
+                android:id="@+id/spSp_itemHdCt"
+                android:layout_width="130dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Nhập số lượng: "/>
+            <EditText
+                android:id="@+id/edtSoLuong_hdct"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:gravity="center"
+                android:layout_marginRight="15dp"
+                android:inputType="number"
+                android:hint="Số lượng" />
+        </LinearLayout>
+
+
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
